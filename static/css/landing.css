@@ -1,0 +1,134 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import font from Google Fonts */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('/static/images/sky.jpg') no-repeat center center fixed; /* Add the GIF background */
+  background-size: cover; /* Ensure it covers the entire viewport */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* White text for better contrast with background */
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff; /* Update text color for contrast */
+  font-weight: 600;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.login-btn {
+  background-color: #00c853;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #00a843;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #242424; /* Update text color */
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 18px;
+  color: #151615; /* Lighter text */
+  margin-bottom: 40px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-btn, .learn-more-btn {
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/*.cta-btn {
+  background-color: #007bff;
+  color: #ffffff;
+}*/
+
+.cta-btn ,.learn-more-btn {
+  background-color: transparent;
+  border: 2px solid #00f7ff;
+  color: #ffffff;
+}
+
+.cta-btn:hover, .learn-more-btn:hover {
+  transform: scale(1.05);
+}
+
+
+.cta-btn:hover , .learn-more-btn:hover {
+  background-color: #45a094;
+  color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .intro h1 {
+      font-size: 32px;
+  }
+
+  .intro p {
+      font-size: 16px;
+  }
+
+  .cta-btn, .learn-more-btn {
+      padding: 10px 20px;
+  }
+}

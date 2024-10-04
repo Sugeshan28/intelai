@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Page with Background Image</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-image: url('../front-end-codes/images/mountain.jpg'); 
+        }
+
+        .box {
+            width: 700px;
+            height: 70px;
+            background-size: cover; 
+            background-position: center; 
+            border: 2px solid #333; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 20px; 
+            padding: 0 20px; 
+            margin-top: 20px; 
+            position: relative; 
+            z-index: 1; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgba(0, 0, 0, 0.603);
+        }
+
+        .box button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .box button:hover {
+            background-color: #ca1b1b;
+        }
+    </style>
+</head>
+<body>
+    {% for heading in head %}
+        <form action="/heading" method="POST">  <!-- Form to handle the post -->
+            <div class="box">
+                <span>{{ heading }}</span>
+                <!-- Hidden input to pass the heading value -->
+                <input type="hidden" name="heading" value="{{ heading }}">
+                <button type="submit">Delete</button>
+            </div>
+        </form>
+    {% endfor %}
+</body>
+</html>

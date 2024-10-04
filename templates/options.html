@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create with AI</title>
+    <link rel="stylesheet" href="/static/css/optionscss.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <header>
+            <div class="navbar">
+                <img src="/static/images/logo.png" alt="Logo" class="logo"> <!-- Add your logo path here -->
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <h1>Create with AI</h1>
+            <p>How would you like to get started?</p>
+
+            <div class="card-container">
+                <div class="card" onclick="window.location.href='/choice';">
+                    <img src="/static/images/prompt.png" alt="Paste in Text"> <!-- Replace with your image icon -->
+                    <h2>prompt</h2>
+                    <p>enter your prompt</p>
+                </div>
+
+                <div class="card popular" onclick="window.location.href='/choice';">
+                    <img src="/static/images/files.png" alt="Generate"> <!-- Replace with your image icon -->
+                    <h2>file</h2>
+                    <p>upload your documents</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('/static/images/sky.jpg') no-repeat center center fixed; /* Set your GIF here */
+    background-size: cover; /* Ensure the GIF covers the entire background */
+    font-family: 'Arial', sans-serif;
+}
+
+.slide-container {
+    display: flex;
+    flex-direction: column; /* Change to column for vertical stacking */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 80%;
+    height: 100px;; /* Set a height for vertical scrolling */
+    position: relative;
+    padding: 20px 0; /* Add some vertical padding */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: Add a white background with some transparency to slides */
+    border-radius: 15px; /* Optional: Add border radius for rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for depth */
+}
+
+.slide {
+    height: 200px; /* Set a fixed height for each slide */
+    padding: 20px;
+    border: 1px solid #007BFF;
+    margin-bottom: 15px; /* Add space between slides */
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slide h1 {
+    font-size: 2em;
+    color: #007BFF;
+}
+
+.slide p {
+    font-size: 1em;
+    color: #555;
+}
+
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
